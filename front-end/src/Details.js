@@ -22,7 +22,7 @@ export default class Details extends React.Component{
             .catch(err => {
                 console.warn(err);
                 this.setState({ error: err.message })
-                alert("error occured");
+                alert("error occured" +"\n" + err.message);
             });
     };
 
