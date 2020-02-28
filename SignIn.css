@@ -21,7 +21,7 @@
     background-color: #fefefe;
   }
   
-  .form-wrapper > h2 {
+  fieldset > legend {
     display: flex;
     justify-content: center;
     font-family: "Segoe UI", "Ubuntu", "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
