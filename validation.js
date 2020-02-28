@@ -1,5 +1,7 @@
 function userNameValidation(inputString) {
-
+    if (inputString.match(/[^a-zA-Z0-9]/g)) {
+        throw new Error("Username can only be alphanumeric")
+    }
 }
 
 //need to confirm unique in db
@@ -8,6 +10,10 @@ function userNameValidation(inputString) {
 //alphanumeric only?
 
 function emailValidation(inputString) {
+    if (inputString.match(/[A-Za-z0-9.]+@[A-Za-z.]+\.[A-Za-z]{2,3}$/g) == null) {
+        throw new Error("Invalid email")
+    }
+
 
 }
 
