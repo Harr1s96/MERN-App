@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import RegisterInputs from './registerInputs.js';
 import {Form} from 'react-bootstrap';
-import { BASE_URL, REGISTER_URL } from '../consts';
+import { BASE_URL, REGISTER_URL } from './consts';
 
 export default class Register extends React.Component{
 
