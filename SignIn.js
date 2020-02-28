@@ -92,30 +92,32 @@ export default class SignIn extends React.Component {
     render(){
         const {errors, formValid} = this.state;
         return(
-            <div> 
-                <h2>Sign In</h2>
-                <form>
-                    <div className='userame'>
-                        <label htmlFor="userame">Username</label>
-                        <FormInput name='username' value={this.state.username} handleChange={this.handleChange}/>
-                        {errors.fullName.length > 0 && 
-                        <span className='error'>{errors.fullName}</span>}
-                    </div>
-                    {/* <div className='email'>
-                        <label htmlFor="email">Email</label>
-                        <FormInput name='email' value={this.state.email} handleChange={this.handleChange}/>
-                        {errors.email.length > 0 && 
-                        <span className='error'>{errors.email}</span>}
-                    </div> */}
-                    <div className='password'>
-                        <label htmlFor="password">Password</label>
-                        <FormInput name='password' type='password' value={this.state.password} handleChange={this.handleChange}/>
-                        {errors.password.length > 0 && 
-                        <span className='error'>{errors.password}</span>}
-                    </div>
-                <button onClick={this.submit}>Submit</button>
-                {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
-                </form>
+            <div className='wrapper'>
+                <div className='form-wrapper'>
+                    <h2>Sign In</h2>
+                    <form>
+                        <div className='userame'>
+                            <label htmlFor="userame">Username</label>
+                            <FormInput name='username' value={this.state.username} handleChange={this.handleChange}/>
+                            {errors.fullName.length > 0 && 
+                            <span className='error'>{errors.fullName}</span>}
+                        </div>
+                        {/* <div className='email'>
+                            <label htmlFor="email">Email</label>
+                            <FormInput name='email' value={this.state.email} handleChange={this.handleChange}/>
+                            {errors.email.length > 0 && 
+                            <span className='error'>{errors.email}</span>}
+                        </div> */}
+                        <div className='password'>
+                            <label htmlFor="password">Password</label>
+                            <FormInput name='password' type='password' value={this.state.password} handleChange={this.handleChange}/>
+                            {errors.password.length > 0 && 
+                            <span className='error'>{errors.password}</span>}
+                        </div>
+                    <button onClick={this.submit}>Submit</button>
+                    {this.state.errorCount !== null ? <p className="form-status">Form is {formValid ? 'valid ✅' : 'invalid ❌'}</p> : 'Form not submitted'}
+                    </form>
+                </div>
             </div>
         );
     }
