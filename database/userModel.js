@@ -1,15 +1,14 @@
+const Sequelize = require("sequelize");
 
-
-module.exports = (sequelize, type) => {
+module.exports = (sequelize) => {
 
     return sequelize.define("user", {
         username: {
-            type: type.String,
-
+            type: Sequelize.STRING,
             allowNull: false
         },
         email: {
-            type: type.String,
+            type: Sequelize.STRING,
             validate: {
                 isEmail: true
             },
@@ -17,7 +16,7 @@ module.exports = (sequelize, type) => {
             allowNull: false
         },
         password: {
-            type: type.String,
+            type: Sequelize.STRING,
             allowNull: false
         }
     })
