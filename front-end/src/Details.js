@@ -13,7 +13,7 @@ export default class Details extends React.Component{
     }
 
     componentDidMount() {
-        axios.get({BASE_URL}+{USER_URL}+{DETAILS_URL}+":id")
+        axios.get({BASE_URL}+{DETAILS_URL}+":id")
             .then(({ data }) => {
             this.setState({
                 Details: [data]
