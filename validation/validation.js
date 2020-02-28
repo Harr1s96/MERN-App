@@ -3,7 +3,6 @@ function userNameValidation(inputString) {
         throw new Error("Username can only be alphanumeric")
     }
 }
-
 //need to confirm unique in db
 //minimum length
 //maximum length?
@@ -14,7 +13,6 @@ function emailValidation(inputString) {
         throw new Error("Invalid email")
     }
 }
-
 //need to confirm unique in db
 //must have String@Domain.Somewhere
 
@@ -37,7 +35,6 @@ function passwordValidation(inputString) {
         throw new Error("Cannot have a space in the password")
     }
 }
-
 //Minimum length
 //Alphanumeric + special
 //
