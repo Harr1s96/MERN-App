@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const userModel = require("./userModel");
-const mysql2 = require("mysql2");
+// const mysql2 = require("mysql2");
 
 const sequelize = new Sequelize("userDB", "dbuser", "password", {
     host: "localhost",
