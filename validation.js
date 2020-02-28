@@ -13,8 +13,6 @@ function emailValidation(inputString) {
     if (inputString.match(/[A-Za-z0-9.]+@[A-Za-z.]+\.[A-Za-z]{2,3}$/g) == null) {
         throw new Error("Invalid email")
     }
-
-
 }
 
 //need to confirm unique in db
